@@ -52,3 +52,4 @@ function changePage(pageID) {
         gridContainer.classList.remove("page2");
     }
 }
+changePage("page1")
