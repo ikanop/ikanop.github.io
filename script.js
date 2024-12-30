@@ -3,7 +3,7 @@ function changePage(pageID) {
     const mainContent = document.getElementById("main-content")
     const container = document.getElementById("container")
     const gridContainer = document.getElementById("grid-container")
-    const page22 = document.getElementById("page22")
+    const page2_1 = document.getElementById("page2_1")
 
     const pages = {
         page1: {
@@ -48,16 +48,16 @@ function changePage(pageID) {
     if (pageID === "page2") {
         container.classList.add("page2");
         gridContainer.classList.add("page2");
-        page22.classList.add("page2");
+        page2_1.classList.add("page2");
     } else {
         container.classList.remove("page2");
         gridContainer.classList.remove("page2");
-        page22.classList.remove("page2");
+        page2_1.classList.remove("page2");
     }
 }
 changePage("page1")
 
-function scrollPage22() {
+function scrollPage2_1() {
     const footer = document.querySelector("footer")
 
     if (footer) {
@@ -68,5 +68,5 @@ function scrollPage22() {
     }
 }
 
-const button = document.getElementById("page22")
-button.addEventListener("click", scrollPage22)
+const button = document.getElementById("page2_1")
+button.addEventListener("click", scrollPage2_1)
