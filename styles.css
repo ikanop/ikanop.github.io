@@ -156,6 +156,15 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    
+    .page-buttons {
+        all: unset;
+        height: 50px;
+        width: 75px;
+        cursor: pointer;
+        background-color: var(--button-color);
+        border-radius: 10px;
+    }
 
     #grid-container {
         height: 100%;
@@ -176,5 +185,20 @@ footer {
 
     #header {
         display: none;
+    }
+
+    #button-group {
+        flex-direction: row;
+    }
+
+    #page2_1.page2 {
+        margin: 0;
+        margin-left: -25px;
+        height: 18.75px;
+        width: 37.5px;
+    }
+
+    #page-buttons h2 {
+        font-size: 1.25rem;
     }
 }
