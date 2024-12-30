@@ -20,6 +20,10 @@ body, html {
     color: var(--text-color);
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 
 
 /* BUTTONS */
@@ -37,9 +41,6 @@ body, html {
     width: 100px;
     cursor: pointer;
     background-color: var(--button-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
 }
 
@@ -50,6 +51,19 @@ body, html {
 .page-buttons h2 {
     margin: 0;
     padding: 0;
+}
+
+#page22 {
+    display: none;
+}
+
+#page22.page2 {
+    display: block;
+    height: 25px;
+    width: 50px;
+
+    align-self: flex-end;
+    margin-top: -20px;
 }
 
 
