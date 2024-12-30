@@ -1,5 +1,5 @@
 :root {
-    --background-color: #0a0a0a; /* Darkest background */
+    --button-color: #0a0a0a; /* Darkest background */
     --primary-color:#1a1a1a ;   /* Dark section color */
     --secondary-color: #121212;   /* Slightly lighter dark section */
     --tertiary-color: #222222;    /* Even lighter dark section */
@@ -7,8 +7,6 @@
     --text-color: #e0e0e0;        /* Light gray text */
     --border-color: #333333;      /* Dark border color */
     --hover-color: #3700b3;       /* Lighter accent on hover */
-    --button-bg-color: #6200ea;   /* Button background color */
-    --button-hover-color: #3700b3;/* Button hover color */
 }
 
 * {
@@ -38,11 +36,15 @@ body, html {
     height: 50px;
     width: 100px;
     cursor: pointer;
-    background-color: var(--button-bg-color);
+    background-color: var(--button-color);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+}
+
+.page-buttons:hover {
+    background-color: var(--tertiary-color);
 }
 
 .page-buttons h2 {
@@ -72,14 +74,15 @@ h2{
     height: 100%;
     display: grid;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 5% 93% 2%;
     grid-template-areas:
     "aside main-header"
-    "aside main";
+    "aside main"
+    "aside footer";
 }
 
 #grid-container.page2{
-    grid-template-rows: 2.5% 97.5%;
+    grid-template-rows: 2.5% 96.5% 1%;
 }
 
 
@@ -116,4 +119,8 @@ main {
     grid-area: main-header;
     height: 100%;
     padding: .375rem 0 0 .75rem;
+}
+
+footer {
+    background-color: var(--primary-color);
 }
