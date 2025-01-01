@@ -143,9 +143,14 @@ main {
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: red;
 }
 
+@media (max-width:1024px) {
+    .page-buttons {
+        width: 75px;
+    }
+}
 
 @media (max-width:768px) {
 
