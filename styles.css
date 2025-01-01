@@ -95,7 +95,7 @@ h2{
     height: 100%;
     display: grid;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 5% 92% 3%;
+    grid-template-rows: 5% auto 3%;
     grid-template-areas:
     "aside main-header"
     "aside main"
@@ -103,7 +103,7 @@ h2{
 }
 
 #grid-container.page2{
-    grid-template-rows: 2.5% 96% 1.5%;
+    grid-template-rows: 2.5% auto 1.5%;
 }
 
 
@@ -146,6 +146,7 @@ footer {
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
+    padding-left: .75rem;
 }
 
 @media (max-width:1024px) {
@@ -155,10 +156,6 @@ footer {
 }
 
 @media (max-width:768px) {
-
-    body.page1 {
-        overflow-y: hidden;
-    }
 
     #page-buttons {
         padding: 0;
@@ -181,7 +178,7 @@ footer {
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 5% 93% 2%;
+        grid-template-rows: 5% auto 3%;
         grid-template-areas:
         "aside"
         "main"
@@ -214,6 +211,7 @@ footer {
     }
 
     footer {
-        font-size: 0.75rem;
+        font-size: .75rem;
+        padding-left: .75rem;
     }
 }

@@ -56,11 +56,11 @@ function changePage(pageID) {
         page2_1.classList.remove("page2");
     }
 
-    if (pageID === "page1") {
-        body.classList.add("page1");
-    } else {
-        body.classList.remove("page1");
-    }
+    //if (pageID === "page1") {
+        //body.classList.add("page1");
+    //} else {
+        //body.classList.remove("page1");
+    //}
 }
 changePage("page1")
 
