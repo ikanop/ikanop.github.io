@@ -170,6 +170,10 @@ main {
     transform: rotateY(180deg);
 }
 
+.flip-card-inner.fast-flip {
+    transition: transform 1s;
+}
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;

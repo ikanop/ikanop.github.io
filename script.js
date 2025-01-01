@@ -83,9 +83,15 @@ button.addEventListener("click", scrollPage2_1)
 
 function flipCard(front) {
     const innerCard = front.closest(".flip-card-inner");
+    
     innerCard.classList.toggle("flipped");
 
     setTimeout(() => {
         innerCard.classList.remove("flipped");
+        innerCard.classList.add("fast-flip");
+       
+        setTimeout(() => {
+            innerCard.classList.remove("fast-flip");
+        }, 500)
     }, 3000)
 }
