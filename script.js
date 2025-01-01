@@ -4,6 +4,7 @@ function changePage(pageID) {
     const container = document.getElementById("container")
     const gridContainer = document.getElementById("grid-container")
     const page2_1 = document.getElementById("page2_1")
+    const body = document.querySelector("body")
 
     const pages = {
         page1: {
@@ -53,6 +54,12 @@ function changePage(pageID) {
         container.classList.remove("page2");
         gridContainer.classList.remove("page2");
         page2_1.classList.remove("page2");
+    }
+
+    if (pageID === "page1") {
+        body.classList.add("page1");
+    } else {
+        body.classList.remove("page1");
     }
 }
 changePage("page1")

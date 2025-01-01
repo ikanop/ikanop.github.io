@@ -95,7 +95,7 @@ h2{
     height: 100%;
     display: grid;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 5% 93% 2%;
+    grid-template-rows: 5% 92% 3%;
     grid-template-areas:
     "aside main-header"
     "aside main"
@@ -103,7 +103,7 @@ h2{
 }
 
 #grid-container.page2{
-    grid-template-rows: 2.5% 96.5% 1%;
+    grid-template-rows: 2.5% 96% 1.5%;
 }
 
 
@@ -143,7 +143,9 @@ main {
 }
 
 footer {
-    background-color: red;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width:1024px) {
@@ -153,6 +155,10 @@ footer {
 }
 
 @media (max-width:768px) {
+
+    body.page1 {
+        overflow-y: hidden;
+    }
 
     #page-buttons {
         padding: 0;
@@ -185,7 +191,7 @@ footer {
     .info-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 200px);
+        grid-template-rows: repeat(3, 1fr);
     }
 
     #header {
@@ -205,5 +211,9 @@ footer {
 
     #page-buttons h2 {
         font-size: 1.25rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
     }
 }
