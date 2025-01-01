@@ -160,7 +160,7 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 2s;
     transform-style: preserve-3d;
     border: 1px solid;
     border-color: var(--border-color);
