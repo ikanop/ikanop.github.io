@@ -4,7 +4,7 @@ function changePage(pageID) {
     const container = document.getElementById("container")
     const gridContainer = document.getElementById("grid-container")
     const page2_1 = document.getElementById("page2_1")
-    const body = document.querySelector("body")
+    const flip_card_container = document.getElementById("flip-card-container")
 
     const pages = {
         page1: {
@@ -50,10 +50,13 @@ function changePage(pageID) {
         container.classList.add("page2");
         gridContainer.classList.add("page2");
         page2_1.classList.add("page2");
+        flip_card_container.classList.add("page2");
     } else {
         container.classList.remove("page2");
         gridContainer.classList.remove("page2");
         page2_1.classList.remove("page2");
+        flip_card_container.classList.remove("page2");
+
     }
 
     //if (pageID === "page1") {
@@ -77,3 +80,12 @@ function scrollPage2_1() {
 
 const button = document.getElementById("page2_1")
 button.addEventListener("click", scrollPage2_1)
+
+function flipCard(front) {
+    const innerCard = front.closest(".flip-card-inner");
+    innerCard.classList.toggle("flipped");
+
+    setTimeout(() => {
+        innerCard.classList.remove("flipped");
+    }, 3000)
+}
