@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="randomNumber(); randomTxt()">
     
     <div id="container">
         <div id="grid-container">
@@ -14,7 +14,7 @@
                 <button class="page-buttons" onclick="changePage('page1')"><h2>Page 1</h2></button>
                 <div id="button-group">
                     <button class="page-buttons" onclick="changePage('page2')"><h2>Page 2</h2></button>
-                    <button class="page-buttons" id="page2_1" onclick="scrollPage22()"><p>2.1</p></button>
+                    <button class="page-buttons" id="scrollToFooter"><p>2.1</p></button>
                 </div>
             </aside>
     
@@ -34,7 +34,10 @@
                     </div>
                 </div>
             </div>
-
+            <div id="RNG">
+                <div id="RNG-txt"></div>
+                <div id="RNG-number"></div>
+            </div>
             <footer>copyright © ikanop</footer>
         </div>
     </div>
