@@ -230,7 +230,28 @@ footer {
     transform: rotateY(180deg);
 }
 
+@media (max-height:768px) and (max-width:1366px){
+    #grid-container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 10% auto 3%;
+        grid-template-areas:
+        "aside main-header"
+        "aside main"
+        "aside footer";
+    }
 
+    #grid-container.page2{
+        grid-template-rows: 5% auto 3% 30% 1.5%;
+        grid-template-areas:
+        "aside main-header"
+        "aside main"
+        "aside rng"
+        "aside flip-card-container"
+        "aside footer";
+    }
+}
 
 @media (max-width:1024px) {
     .page-buttons {
@@ -311,28 +332,5 @@ footer {
     footer {
         font-size: .75rem;
         padding-left: .75rem;
-    }
-}
-
-@media (max-height:768px) {
-    #grid-container{
-        height: 100%;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 10% auto 3%;
-        grid-template-areas:
-        "aside main-header"
-        "aside main"
-        "aside footer";
-    }
-
-    #grid-container.page2{
-        grid-template-rows: 5% auto 3% 30% 1.5%;
-        grid-template-areas:
-        "aside main-header"
-        "aside main"
-        "aside rng"
-        "aside flip-card-container"
-        "aside footer";
     }
 }
