@@ -15,8 +15,8 @@ function changePage(pageID) {
                         <p>JS/CSS/HTML</p>
                     </div>
                     <div class="info-spacing">
-                        <h2>Header</h2>
-                        <p>Content</p>
+                        <h2>My minecraft texture pack</h2>
+                        <a href="files/texture%20pack.zip" download>Download ZIP</a>
                     </div>
                     <div class="info-spacing">
                         <h2>Random Quote</h2>
