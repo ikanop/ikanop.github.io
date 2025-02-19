@@ -4,40 +4,36 @@ function changePage(pageID) {
     const container = document.getElementById("container")
     const gridContainer = document.getElementById("grid-container")
     const flipCardContainer = document.getElementById("flip-card-container")
-    const RNG = document.getElementById("RNG")
+    const randomNumberGenerator = document.getElementById("random-number-generator")
 
     const pages = {
         page1: {
             title: `<h1>Info</h1>`,
             content: `
-            <div class="info-spacing">
+            <div class="main-spacing">
                         <h2>Currently Learning</h2>
                         <p>JS/CSS/HTML</p>
                     </div>
-                    <div class="info-spacing">
+                    <div class="main-spacing">
                         <h2>My minecraft texture pack</h2>
                         <a href="files/texture%20pack.zip" download>Download ZIP</a>
                     </div>
-                    <div class="info-spacing">
+                    <div class="main-spacing">
                         <h2>Random Quote</h2>
-                        <div id="RNG-txt"><div>
+                        <div id="random-text-generator"><div>
                     </div>
                 `
         },
         page2: {
-            title: `<h1>wjdad</h1>`,
+            
+            title: `<h1>Images and messing around</h1>`,
             content: `
-                <div class="info-spacing">
-                    <h2>New Topic</h2>
-                    <p>New content for Page 2!</p>
-                </div>
-                <div class="info-spacing">
-                    <h2>Another Header</h2>
-                    <p>More content for Page 2.</p>
-                </div>
-                <div class="info-spacing">
-                    <h2>Additional Section</h2>
-                    <p>Additional content for Page 2.</p>
+                <div id="image-grid">                        
+                        <img id="image1" src="images/minecraftPortal1.png">
+                        <img id="image2" src="images/minecraftPortal2.png">
+                        <img id="image3" src="images/minecraftPortal3.png">
+                        <img id="image4" src="images/minecraftPortal4.png">
+                        <img id="image5" src="images/minecraftPortal5.png">
                 </div>
             `
         }
@@ -53,13 +49,13 @@ function changePage(pageID) {
     if (pageID === "page2") {
         container.classList.add("page2");
         gridContainer.classList.add("page2");
-        RNG.classList.add("page2")
+        randomNumberGenerator.classList.add("page2")
         scrollToFooter.classList.add("page2");
         flipCardContainer.classList.add("page2");
     } else {
         container.classList.remove("page2");
         gridContainer.classList.remove("page2");
-        RNG.classList.remove("page2")
+        randomNumberGenerator.classList.remove("page2")
         scrollToFooter.classList.remove("page2");
         flipCardContainer.classList.remove("page2");
     }
@@ -104,16 +100,16 @@ function flipCard(front) {
 
 
 function randomNumber() {
-    const outputElement = document.getElementById("RNG-number")
+    const outputElement = document.getElementById("random-number-generator-output")
 
     const index = Math.floor(Math.random() * 100);
-    outputElement.innerHTML = `RNG: ${index}`;
+    outputElement.innerHTML = `random-number-generator: ${index}`;
 }
 
 
 
 function randomTxt() {
-    const outputElement = document.getElementById("RNG-txt")
+    const outputElement = document.getElementById("random-text-generator")
 
     const texts =  ["Believe you can, and you're halfway there.",
     "The best way to predict the future is to create it.",
