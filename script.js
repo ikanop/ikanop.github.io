@@ -63,7 +63,7 @@ function changePage(pageID) {
 
 
 
-changePage("page1")
+changePage("page2")
 
 
 
