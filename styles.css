@@ -136,9 +136,10 @@ a{
     display: grid;
     height: auto;
     width: 90vw;
-    height: 0vh;
+    height: 100vh;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    align-content: start;
 }
 
 #image-grid img {
