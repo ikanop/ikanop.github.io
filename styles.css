@@ -132,7 +132,7 @@ a{
 }
 
 #image-grid {
-    padding: 20px 20px 20px 20px;
+    padding: 10px 20px 20px 20px;
     display: grid;
     height: auto;
     width: 90vw;
@@ -329,12 +329,14 @@ footer {
     .main-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, calc(92vh / 3));
+        grid-template-rows: repeat(3, calc(89.5vh / 3));
     }
 
     #image-grid {
         width: 100vw;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 10px 10px 10px 10px;
     }
 
 
