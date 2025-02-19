@@ -309,7 +309,7 @@ footer {
     #grid-container {
         height: 100%;
         grid-template-columns: 100%;
-        grid-template-rows: 5% auto 3%;
+        grid-template-rows: 7.5% auto 3%;
         grid-template-areas:
         "aside"
         "main"
@@ -317,7 +317,7 @@ footer {
     }
 
     #grid-container.page2 {
-        grid-template-rows: 2.5% auto 3% 30% 1.5%;
+        grid-template-rows: 3.75% auto 3% 30% 1.5%;
         grid-template-areas:
         "aside"
         "main"
@@ -334,6 +334,7 @@ footer {
 
     #image-grid {
         width: 100vw;
+        grid-template-columns: 1fr;
     }
 
 
