@@ -110,7 +110,7 @@ aside {
         "footer";
     }
 
-    .main-grid {
+    #main-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, calc(89.5vh / 3));
