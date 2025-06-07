@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ikanop Portifolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="randomTxt()">
+    
+    <div id="container">
+        <div id="grid-container">
+            <h1 id="header">Info</h1>
+
+            <aside id="page-buttons">
+                <a href="index.html" class="page-buttons">
+                    <h2>Page 1</h2>
+                </a>
+                <a href="page2.html" class="page-buttons">
+                    <h2>Page 2</h2>
+                </a>
+            </aside>
+        
+            <main id="main-grid">
+                <div class="spacing">
+                    <h2>Currently Learning</h2>
+                    <p>JS / CSS / HTML / SHELL / LINUX</p>
+                </div>
+                <div class="spacing">
+                    <h2>My Minecraft Texture pack</h2>
+                    <a href="files/texture%20pack.zip" download="">Download ZIP</a>
+                </div>
+                <div class="spacing">
+                    <h2>Random Quote<span id="small-side-text">(chatGPT)</span></h2>
+                    <div id="random-text-generator"></div>
+                </div>
+            </main>
+            <footer>copyright © ikanop</footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

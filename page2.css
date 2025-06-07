@@ -1,0 +1,222 @@
+:root {
+    --button-color: #0a0a0a; /* Darkest background */
+    --primary-color:#1a1a1a ;   /* Dark section color */
+    --secondary-color: #121212;   /* Slightly lighter dark section */
+    --tertiary-color: #222222;    /* Even lighter dark section */
+    --accent-color: #f172b4;      /* Accent color (light purple) */
+    --text-color: #e0e0e0;        /* Light gray text */
+    --border-color: #333333;      /* Dark border color */
+    --hover-color: #3700b3;       /* Lighter accent on hover */
+}
+
+
+
+body, html {
+    height: 200vh;
+    color: var(--text-color);
+}
+
+
+
+/* #region main-container */
+#container {
+    height: 200vh;
+    background-color: var(--primary-color);
+}
+
+
+#grid-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 2.5% 2.5% auto 3% 30% 1.5%;
+    grid-template-areas:
+    "aside header"
+    "aside scroll-to-footer"
+    "aside main"
+    "aside rng"
+    "aside flip-card-container"
+    "aside footer";
+}
+/* #endregion */
+
+
+
+/* #region image-grid */
+#image-grid {
+    padding: 10px 20px 20px 20px;
+    display: grid;
+    height: auto;
+    width: 90vw;
+    height: 100vh;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: start;
+}
+
+#image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+/* #endregion */
+
+
+
+/* #region grid-areas */
+#header {
+    padding: .375rem 0 0 .75rem;
+}
+
+#scroll-to-footer {
+    grid-area: scroll-to-footer;
+    display: block;
+    height: 1.5rem;
+    width: 25rem;
+    margin-left: .75rem;
+    border: 1px solid var(--accent-color);
+    color: white;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--primary-color);
+}
+
+#random-number-generator {
+    grid-area: rng;
+    text-align: center;
+    display: block;
+}
+
+aside {
+    line-height: 0;
+    grid-area: aside;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+#flip-card-container{
+    grid-area: flip-card-container;    
+    display: flex;
+    justify-content: center;
+}
+/* #endregion */
+
+
+
+/* #region flip-card */
+#flip-card-container{  
+    display: flex;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    border: 1px solid;
+    border-color: var(--border-color);
+}
+
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner.fast-flip {
+    transition: transform 1s;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front:hover {
+    cursor: pointer;
+}
+
+.flip-card-back {
+    background-color: var(--tertiary-color);
+    transform: rotateY(180deg);
+}
+/* #endregion */
+
+
+
+/* #region media */
+@media (max-height:768px) and (max-width:1366px){
+    #grid-container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 5% 1% auto 3% 30% 1.5%;
+        grid-template-areas:
+        "aside main-header"
+        "aside scroll-to-footer"
+        "aside main"
+        "aside rng"
+        "aside flip-card-container"
+        "aside footer";
+    }
+
+    #scroll-to-footer {
+        margin-top: -12px;
+    }
+}
+
+
+
+@media (max-width:768px) {
+
+    #grid-container {
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 3.75% 3% auto 3% 30% 1.5%;
+        grid-template-areas:
+        "aside"
+        "scroll-to-footer"
+        "main"
+        "rng"
+        "flip-card-container"
+        "footer";
+    }
+
+    #image-grid {
+        width: 100vw;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 0 10px 10px 10px;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #scroll-to-footer {
+        margin: auto auto;
+    }
+    
+    footer {
+        font-size: .75rem;
+        padding-left: .75rem;
+    }
+}
+/* #endregion */

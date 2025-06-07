@@ -1,0 +1,93 @@
+:root {
+    --button-color: #0a0a0a; /* Darkest background */
+    --primary-color:#1a1a1a ;   /* Dark section color */
+    --secondary-color: #121212;   /* Slightly lighter dark section */
+    --tertiary-color: #222222;    /* Even lighter dark section */
+    --accent-color: #f172b4;      /* Accent color (light purple) */
+    --text-color: #e0e0e0;        /* Light gray text */
+    --border-color: #333333;      /* Dark border color */
+    --hover-color: #3700b3;       /* Lighter accent on hover */
+}
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* #region side-buttons */
+#page-buttons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-buttons {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 10vw;
+    cursor: pointer;
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+.page-buttons:hover {
+    background-color: var(--tertiary-color);
+}
+/* #endregion */
+
+
+
+/* #region text */
+a{
+    color: cyan;
+}
+/* #endregion */
+
+
+
+footer {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding-left: .75rem;
+}
+
+@media (max-width:768px) {
+    #page-buttons {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-buttons h2 {
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .page-buttons {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 75px;
+        cursor: pointer;
+        background-color: var(--button-color);
+        border-radius: 10px;
+    }
+}

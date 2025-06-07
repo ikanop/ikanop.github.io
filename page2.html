@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ikanop Portifolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body onload="randomNumber();">
+    
+    <div id="container">
+        <div id="grid-container">
+            <aside id="page-buttons">
+                <a href="index.html" class="page-buttons">
+                    <h2>Page 1</h2>
+                </a>
+                <a href="page2.html" class="page-buttons">
+                    <h2>Page 2</h2>
+                </a>
+            </aside>
+
+            <h1 id="header">Images and javaScript</h1>
+
+            <button id="scroll-to-footer">
+                <h3>Scroll Down</h3>
+            </button>
+        
+            <main>
+                <div id="image-grid">
+                    <img src="images/minecraftPortal1.png">
+                    <img src="images/minecraftPortal2.png">
+                    <img src="images/minecraftPortal3.png">
+                    <img src="images/minecraftPortal4.png">
+                    <img src="images/minecraftPortal5.png">
+                </div>
+            </main>
+
+            <div id="random-number-generator">
+                <div id="random-number-generator-output"></div>
+            </div>
+
+            <div id="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" onclick="flipCard(this)">
+                            <h1>click me!</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Hello!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>copyright © ikanop</footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
