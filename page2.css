@@ -64,10 +64,6 @@ body, html {
 
 
 /* #region grid-areas */
-#header {
-    padding: .375rem 0 0 1.25rem;
-}
-
 #scroll-to-footer {
     grid-area: scroll-to-footer;
     display: block;

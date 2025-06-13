@@ -22,6 +22,12 @@
 
 
 
+#header {
+    padding: .375rem 0 0 1.25rem;
+}
+
+
+
 /* #region side-buttons */
 #page-buttons {
     padding-top: 1.25rem;
