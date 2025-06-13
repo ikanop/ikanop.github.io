@@ -24,10 +24,10 @@
 
 /* #region side-buttons */
 #page-buttons {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .page-buttons {
@@ -39,7 +39,7 @@
     width: 10vw;
     cursor: pointer;
     background-color: var(--button-color);
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .page-buttons:hover {
@@ -84,10 +84,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50px;
-        width: 75px;
+        height: 7.5vh;
+        width: 5rem;
         cursor: pointer;
         background-color: var(--button-color);
-        border-radius: 10px;
+        border-radius: .625rem;
     }
 }
